@@ -1,0 +1,103 @@
+.container1{
+    grid-template-rows: 45px 1fr;
+    grid-template-columns: 25% 75%;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-column-gap: 10px;
+}
+.header{
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url("Images/header1.png");
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-color: #C01F1F;
+}
+.sorting_bar{
+    border: 1px solid black;
+}
+.houses{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 5px;
+    padding: 5px;
+}
+.house{
+    border: 1px solid black;
+    height: 430px;
+}
+.address, .content{
+    text-align: center;
+}
+.button{
+    display: inline-flex;
+    height: 35px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 15px;
+    align-items: center;
+    position: absolute;
+    right: 10%;
+    top: 2%;
+}
+.button1{
+    width: 200px;
+    height: 30px;
+    background-color: #C01F1F;
+    color: white;
+    border: none;
+    font-size: 15px;
+    margin-left: 25px;
+    font-weight: bold;
+}
+.button2{
+    height: 35px;
+    font-size: 30px;
+    align-items: center;
+    position: absolute;
+    right: 6%;
+    top: 2%;
+    border: hidden;
+    background: #C01F1F;
+}
+.button3{
+    font-size: 30px;
+    border: none;
+    background: white;
+    margin-left: 200px;
+}
+.button4{
+    height: 35px;
+    font-size: 30px;
+    align-items: center;
+    position: absolute;
+    right: 0%;
+    top: 2%;
+    border: hidden;
+    background: #C01F1F;
+}
+.button5{
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    border: hidden;
+    background: #C01F1F;
+    height: 35px;
+    font-size: 30px;
+}
+.button__text, .button__icon{
+    display: inline-flex;
+    align-items: center;
+    padding: 0 5px;
+}
+button{
+    background-color: #C01F1F;
+    height: 30px;
+    font-size: 15px;
+}

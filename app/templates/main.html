@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+</head>
+<body>
+    <div class="container1">
+        <div class="header">
+            <a href='/post/{{name}}'>
+                <button type="button" class="button">
+                    <span class="text">create post</span>
+                    <span class="button__icon">
+                        <ion-icon name="add-outline"></ion-icon>
+                    </span>
+                </button>
+            </a>
+            <a href='/profile/{{name}}'>
+                <button type="button" class="button2">
+                    <span class="button__icon">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </span>
+                </button>
+            </a>
+            <a href='/edit_profile/{{name}}'>
+                <button type="button" class="button4">
+                    <span class="button__icon">
+                        <ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>
+                    </span>
+                </button>
+            </a>
+            <a href='/login'>
+                <button type="button" class="button5">
+                    <span class="button__icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </span>
+                </button>
+            </a>
+        </div>
+        <div class="sorting_bar">
+            <form method="post" name="page_form">
+                <label>Post type: </label>
+                <select id="type" name="type">
+                    <option value="housing post">housing post</option>
+                    <option value="sublease">sublease</option>
+                </select><br>
+                <label>Total Monthly Rent From: </label>
+                <input type="number" name=lower_rent value=0><br>
+                <label>Total Monthly Rent To: </label>
+                <input type="number" name=upper_rent value=0><br>
+                <label>Number of Bedrooms: </label>
+                <input type="number" name=bedrooms value="0"><br>
+                <label>Number of Bathrooms(At least): </label>
+                <input type="number" name=bathrooms value="0"><br>
+                <input type="submit">
+            </form>
+
+        </div>
+        <div class="houses">
+            {% for x in range(amount) %}
+                <div class="house">
+                    <form action="/like/{{address[x]}}/{{name}}" method="post">
+                       <button type="submit" class="button3" name="like">
+                           <span class="button__icon">
+                               <ion-icon name="heart"></ion-icon>
+                           </span>
+                       </button>
+                    </form>
+
+                    <div class="address">
+                        <h2>{{address[x]}}</h2>
+                    </div>
+                    <div class="content">
+                        <h3>Total Monthly Rent: {{rent[x]}}</h3>
+                        <h3>Bedrooms: {{bedrooms[x]}}</h3>
+                        <h3>Bathrooms: {{bathrooms[x]}}</h3>
+                        <h3>Amenities: {{amenities[x]}}</h3>
+                        <a href="{{detail_url[x]}}">
+                            <button type="button" class="button1"> More details </button>
+                        </a>
+                    </div>
+                </div>
+            {%endfor%}
+        </div>
+        <button onclick="window.location.href = '/main/{{name}}/{{index}}/{{type}}/{{bedroom}}/{{bathroom}}/{{upper}}/{{lower}}' ; ">Next Page</button>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

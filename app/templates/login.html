@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css')}}">
+</head>
+
+<body>
+    <div class="container">
+    <div class="left">
+        <div class="header">
+            <h2>Welcome to OSU off-campus housing</h2>
+            <h3>looking for a new home ?</h3>
+        </div>
+    </div>
+    <div class="right">
+        <div class="post">
+            <h1>Log in</h1>
+            <br/>
+            <p>Do not have an account ?
+                <a href='signup' style="color: blue">signup</a>
+            </p>
+            <br/><br/>
+            <form name="login_form" action="{{url_for('login')}}" method="post">
+                <label style="color: white">Username</label>
+                <input name="name" type="text" required/>
+                <br/><br/><br/><br/>
+                <label style="color: white">Password</label>
+                <input name="password" type="text" required/>
+                <br/><br/><br/><br/>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>

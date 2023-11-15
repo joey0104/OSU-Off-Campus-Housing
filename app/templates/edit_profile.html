@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css')}}">
+</head>
+
+<body>
+    <div class="container">
+    <div class="left">
+        <div class="header">
+            <h2>Welcome to OSU off-campus housing</h2>
+            <h3>looking for a new home ?</h3>
+        </div>
+    </div>
+    <div class="right">
+        <div class="post">
+            <form method="post" name="edit_profile" enctype="multipart/form-data">
+                <h1>Edit Profile</h1>
+                <p>Already have an account?
+                    <a href='/login' style="color: blue">login</a>
+                </p>
+                <label style="color: white">Username</label>
+                <br/><br/>
+                <input name="name" type="text" style="width:200px" value="no change"/>
+                <br/><br/>
+                <label style="color: white">Name</label>
+                <br/><br/>
+                <input name="fullname" type="text" style="width:200px" value="no change"/>
+                <br/><br/>
+                <label style="color: white">Password</label>
+                <br/><br/>
+                <input name="password" type="text" style="width:200px" value="no change"/>
+                <br/><br/>
+                <label style="color: white">Email</label>
+                <br/><br/>
+                <input name="email" type="text" style="width:200px" value="no change"/>
+                <br/><br/>
+                <label style="color: white">Bio</label>
+                <br/><br/>
+                <textarea name="bio" rows="15" style="height:200px; width: 200px">No change</textarea>
+                <br/><br/>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Like</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='like.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        </div>
+        <div class="like">
+            <div class="address">
+                 <p>address: {{post.address}}</p>
+            </div>
+            <div class="list">
+                <p1>Users who have liked this post</p1>
+                <ul>
+                    {% for i in like_users %}
+                        <li>
+                            <a href="/profile/{{i}}">
+                            {{i}}</a>
+                        </li>
+                    {% endfor%}
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

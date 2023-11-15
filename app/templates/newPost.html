@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='newPost.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        </div>
+        <div class="content">
+            <h1>Listing Information</h1>
+            <p1>{{post.address}}</p1>
+            <p>rent: {{post.rent}}</p>
+            <p>Number of Bedrooms: {{post.bedroom}}</p>
+            <p>Number of Bathrooms: {{post.bathroom}}</p>
+            <p>Amenities: {{post.amenities}}</p>
+            <h1>Additional information</h1>
+            <p>{{post.info}}</p>
+        </div>
+        <div class="pic">
+            <img src="{{url_for('static', filename=pic1)}}">
+            <img src="{{url_for('static', filename=pic2)}}">
+            <img src="{{url_for('static', filename=pic3)}}">
+            <img src="{{url_for('static', filename=pic4)}}">
+            <img src="{{url_for('static', filename=pic5)}}">
+        </div>
+    </div>
+</body>
+</html>

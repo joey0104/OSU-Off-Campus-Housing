@@ -1,0 +1,104 @@
+.container{
+    grid-template-rows: 40px 1fr 1fr 1fr 1fr;
+    grid-template-columns: 40% 60%;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    gap: 2px;
+}
+.header{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url("Images/header1.png");
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-color: #C01F1F;
+}
+img{
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+}
+.info{
+   border: 1px solid black;
+   grid-row-start: 2;
+   grid-row-end: 6;
+   text-align: center;
+   font-size: 18px;
+}
+.h1{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.post{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-template-columns: 33% 33% 33%;
+    gap: 5px;
+    padding: 5px;
+    display: grid;
+}
+.h2{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.liked{
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-template-columns: 33% 33% 33%;
+    gap: 5px;
+    padding: 5px;
+    display: grid;
+}
+.house{
+    border: 1px solid black;
+    height: 500px;
+}
+.address, .content{
+    text-align: center;
+}
+.button{
+    display: inline-flex;
+    height: 35px;
+    background: #A9A9A9;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 15px;
+    align-items: center;
+    position: absolute;
+    left: 5%;
+    bottom: 2%;
+    width: 90px;
+    padding: 10px;
+}
+.button1{
+    width: 200px;
+    height: 30px;
+    background-color: #C01F1F;
+    color: white;
+    border: none;
+    font-size: 15px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+.button__text, .button__icon{
+    display: inline-flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.button2{
+    font-size: 30px;
+    border: none;
+    background: white;
+    margin-left: 160px;
+}

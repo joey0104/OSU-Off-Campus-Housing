@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css')}}">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        </div>
+            <div class="info">
+                <img src="{{url_for('static', filename=url)}}">
+                <p>Username: {{user.name}}</p>
+                <p>Fullname: {{user.fullname}}</p>
+                <p>Email address: {{user.email}}</p>
+                <p>Bio: {{user.bio}}</p>
+            </div>
+            <div class="h1">
+                <h1>Your Posts</h1></br></br>
+            </div>
+            <div class="post">
+                    {% for i in range (length1) %}
+                        <div class="house">
+                            <form action="/delete_post/{{user.name}}/{{addresses[i]}}" method="post">
+                                <button type="submit" class="button2" name="delete">
+                                    <span class="button__icon">
+                                        <ion-icon name="close-circle-outline"></ion-icon>
+                                    </span>
+                                </button>
+                            </form>
+                            <a href='/edit_post/{{addresses[i]}}'>
+                                <button type="button" class="button4">
+                                    <span class="button__icon">
+                                        <ion-icon name="hammer-outline"></ion-icon>
+                                    </span>
+                                </button>
+                            </a>
+                            <div class="address">
+                               <h2>{{addresses[i]}}</h2>
+                            </div>
+                            <div class="content">
+                                <h3>Total Monthly Rent {{rent[i]}}</h3>
+                                <h3>Bedrooms {{bedroom[i]}}</h3>
+                                <h3>Bathrooms {{bathroom[i]}}</h3>
+                                <h3>Amenities {{amenities[i]}}</h3>
+                                <a href="{{detail_url[i]}}">
+                                    <button type="button" class="button1"> More details </button>
+                                </a>
+                            </div>
+                        </div>
+                    {%endfor%}
+            </div>
+            <div class="h2">
+                <h1>Your Liked Posts</h1></br></br>
+            </div>
+            <div class="liked">
+                {% for i in range (length2) %}
+                    <div class="house">
+                        <form action="/delete_liked/{{user.name}}/{{addresses[i+length1]}}" method="post">
+                            <button type="submit" class="button2" name="delete">
+                                <span class="button__icon">
+                                    <ion-icon name="heart-dislike-outline"></ion-icon>
+                                </span>
+                            </button>
+                        </form>
+                        <div class="address">
+                            <h2>{{addresses[i+length1]}}</h2>
+                        </div>
+                        <div class="content">
+                            <h3>Total Monthly Rent {{rent[i+length1]}}</h3>
+                            <h3>Bedrooms {{bedroom[i+length1]}}</h3>
+                            <h3>Bathrooms {{bathroom[i+length1]}}</h3>
+                            <h3>Amenities {{amenities[i+length1]}}</h3>
+                            <a href="{{detail_url[i+length1]}}">
+                                <button type="button" class="button1"> More details </button>
+                            </a>
+                        </div>
+                    </div>
+                {%endfor%}
+            </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

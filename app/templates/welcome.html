@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='load.css')}}">
+    <script>
+    function login() {
+        window.location.href = 'signup';
+    }
+    fetch('load').then(login);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        </div>
+        <div class="img">
+            <h>Welcome to Ohio State Off-Campus Housing Databse</h>
+            <p>loading...</p>
+        </div>
+    </div>
+</body>
+</html>

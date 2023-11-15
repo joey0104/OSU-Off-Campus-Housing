@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='edit_post.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        </div>
+        <div class="form">
+            <form method="post" name="post_form">
+                <br>
+                <h>Edit your housing post</h><br><br>
+
+                <select id="post_type" name="post_type">
+                    <option value="housing post">Housing Post</option>
+                    <option value="sublease">Sublease</option>
+                </select><br>
+
+                <label> Address: </label><br>
+                <input type="text" name="address" value="no change"><br>
+
+                <label> Payment of Rent: </label><br>
+                from<input type="text" name= "upper_rent" value="no change">to<input type="text" name= "lower_rent" value="no change"><br>
+
+                <label>Number of Bedrooms: </label><br>
+                <input type="text" name= "bedrooms" value="no change"><br>
+
+                <label>Number of Bathrooms: </label><br>
+                <input type="text" name= "bathrooms" value="no change"><br>
+
+                <label>General amenities: </label><br>
+                <input type="text" name= "amenities" value="no change"><br>
+
+                <label>Additional information: </label> <br>
+                <textarea name="info" rows="15" style="height:200px; width: 200px">no change</textarea><br>
+
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

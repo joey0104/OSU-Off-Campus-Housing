@@ -1,0 +1,40 @@
+.container{
+    grid-template-rows: 45px 1fr 1fr;
+    grid-template-columns: 25% 50% 25%;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+}
+.header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-image: url("Images/header1.png");
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-color: #C01F1F;
+}
+.content{
+   grid-column-start: 2;
+   grid-column-ends:  4;
+   text-align: center;
+   background-color: grey;
+}
+.pic{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-start: 2;
+    grid-column-ends:  4;
+    gap: 5px;
+    padding: 5px;
+}
+img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    height: 200px;
+    width: 200px;
+}
+p1{
+    font-size: 25px;
+}

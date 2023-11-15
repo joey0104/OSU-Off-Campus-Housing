@@ -1,0 +1,35 @@
+.container{
+    grid-template-rows: 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    background-image: url("Images/post.png");
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+.header{
+    background-image: url("Images/header1.png");
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-color: #C01F1F;
+    height: 45px;
+}
+.form{
+    display: flex;
+    height: 100%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    width: 50%;
+    margin: auto;
+
+}
+h{
+    font-size:40px;
+    font-family:"Gill Sans", sans-serif;
+}
+input, textarea{
+    border-radius: 25px;
+}

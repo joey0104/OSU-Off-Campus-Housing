@@ -1,0 +1,34 @@
+.container{
+    grid-template-rows: 90px 1fr;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+}
+.header{
+    background-image: url("Images/load_header.png");
+    background-position: center;
+    background-size: 500px 90px;
+    background-repeat: no-repeat;
+    background-color: #1c232d;
+}
+.img{
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                       rgba(0, 0, 0, 0.5)),url("Images/load.jpeg");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+h{
+    position: absolute;
+    top: 45%;
+    left: 18%;
+    color: #DFE2E0;
+    font-size: 40px;
+}
+p{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    color: #DFE2E0;
+    font-size: 30px;
+}

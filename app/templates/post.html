@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='post.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        </div>
+        <div class="form">
+            <form method="post" name="post_form" enctype="multipart/form-data">
+                <br>
+                <h>Create a housing post</h><br><br>
+
+                <label>How many images would you like to upload: </label>
+                <input type="number" name="img_num"><br><br>
+
+                <select id="post_type" name="post_type">
+                    <option value="housing post">Housing Post</option>
+                    <option value="sublease">Sublease</option>
+                </select><br>
+
+                <label> Address: </label><br>
+                <input type="text" name="address" required><br>
+
+                <label> Payment of Rent: </label><br>
+                from<input type="text" name= "lower_rent" required>to<input type="text" name="upper_rent" required><br>
+
+                <label>Number of Bedrooms: </label><br>
+                <input type="text" name= "bedrooms" required><br>
+
+                <label>Number of Bathrooms: </label><br>
+                <input type="text" name= "bathrooms" required><br>
+
+                <label>General amenities: </label><br>
+                <input type="text" name= "amenities" required><br>
+
+                <label>Additional information: </label> <br>
+                <textarea name="info" rows="15" style="height:200px; width: 200px" placeholder="Please include amenities, parking availability, pet restrictions, utilities, and property details" required></textarea><br>
+                <label>Add image: (5 images required) </label><br>
+                <input type="file" id="img" name="img" accept=".jpg, .jpeg, .png"><br/>
+                <input type="file" id="img1" name="img2" accept=".jpg, .jpeg, .png"><br/>
+                <input type="file" id="img2" name="img3" accept=".jpg, .jpeg, .png"><br/>
+                <input type="file" id="img3" name="img4" accept=".jpg, .jpeg, .png"><br/>
+                <input type="file" id="img4" name="img5" accept=".jpg, .jpeg, .png"><br/>
+
+                <button type="submit">submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

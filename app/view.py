@@ -348,11 +348,11 @@ def newPost(address):
     post = Post.query.filter_by(address=address).first()
     addresses=post.pic_address
     addresses=addresses.split(";;")
-    pic1 = addresses[0]
-    pic2 = addresses[1]
-    pic3 = addresses[2]
-    pic4 = addresses[3]
-    pic5 = addresses[4]
+    pic1 = "images/"+addresses[0]
+    pic2 = "images/"+addresses[1]
+    pic3 = "images/"+addresses[2]
+    pic4 = "images/"+addresses[3]
+    pic5 = "images/"+addresses[4]
     return render_template('newPost.html', post=post, pic1=pic1, pic2=pic2, pic3=pic3, pic4=pic4, pic5=pic5)
 
 @app.route("/like/<address>/<name>", methods=["POST"])

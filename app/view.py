@@ -207,7 +207,8 @@ def profile(name):
     # get liked posts
     liked_addresses = user.liked
     liked_addresses = liked_addresses[:-2].split(";;")
-    liked_addresses.pop()
+    # delete duplicates
+    liked_addresses=set(liked_addresses)
     length2 = len(liked_addresses)
     if length2 >0:
         for address in liked_addresses:

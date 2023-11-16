@@ -7,5 +7,6 @@ Finding roommates and apartments could be aggravating and strenuous. The primary
 ## Installation
 Use the package manager pip to install:
   * beautifulSoup4 for web-scraping
-  * flask for website development
+  * Flask for website development
   * sqlalchemy for database usage (flask_sqlalchemy)
+  * uuid for unique image address

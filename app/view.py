@@ -348,8 +348,8 @@ def newPost(address):
     post = Post.query.filter_by(address=address).first()
     addresses=post.pic_address
     addresses=addresses.split(";;")
-    pic1=addresses[0]
-    pic2=addresses[1]
+    pic1 = addresses[0]
+    pic2 = addresses[1]
     pic3 = addresses[2]
     pic4 = addresses[3]
     pic5 = addresses[4]

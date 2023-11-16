@@ -283,11 +283,12 @@ def post(name):
 
         upper = request.form['upper_rent']
         lower = request.form['lower_rent']
-
+        new_address=request.form['address']
+        
         # add new posts to the database
         post=Post(
             type=request.form['post_type'],
-            address=request.form['address'],
+            address=new_address,
             rent="$"+lower+".00"+" - "+"$"+upper+".00",
             amenities=request.form['amenities'],
             bedroom=request.form['bedrooms'],
@@ -301,10 +302,10 @@ def post(name):
 
         user=User.query.filter_by(name=name).first()
         address=user.post_address
-        address=address+";;"+request.form['address']
+        address=address+";;"+new_address
         user.post_address=address
         db.session.commit()
-        return redirect(url_for('main', name=name, index="0", type="housing post", bedroom="0", bathroom="0", upper="0", lower="0"))
+        return redirect(url_for('newPost', address=new_address))
     else:
         return render_template('post.html')
 @app.route('/edit_post/<address>', methods=['POST', 'GET'])

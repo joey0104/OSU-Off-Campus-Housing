@@ -30,6 +30,9 @@ h{
     font-size:40px;
     font-family:"Gill Sans", sans-serif;
 }
-input, textarea{
+input{
     border-radius: 25px;
+}
+textarea{
+    border-radius: 10px;
 }

@@ -10,6 +10,7 @@ Use the package manager pip to install:
   * Flask for website development
   * sqlalchemy for database usage (flask_sqlalchemy)
   * uuid for unique image address
-## Video
-https://github.com/joey0104/OSU-Off-Campus-Housing/assets/87663068/0de6894e-b958-4180-8e9d-185d9f5bb91c
+## Visuals
+https://github.com/joey0104/OSU-Off-Campus-Housing/assets/87663068/f2f43bcb-1af9-48aa-9118-f387b7bbb191
+
 

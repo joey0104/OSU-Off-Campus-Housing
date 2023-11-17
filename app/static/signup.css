@@ -41,6 +41,9 @@ p{
     position: fixed;
     top: 10%;
 }
-input, textarea{
+input{
     border-radius: 25px;
+}
+textarea{
+    border-radius: 10px;
 }

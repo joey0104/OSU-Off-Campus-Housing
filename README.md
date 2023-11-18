@@ -1,5 +1,5 @@
 # OSU-off-campus-housing
-This webiste is developed to advance efficiency in student's search for suitable apartments and roommates
+This website is developed to advance efficiency in student's search for suitable apartments and roommates
 ## Description
 This website is assembled with Python, CSS, and HTML, incorporating with flask_sqlalchemy, flask, and techniques, including webscpraing and more. To utilize the website, users are required to create an account, providing basic information and a brief bio to enhance their experience. The webiste collects housing posts from the official OSU off-campus housing website. A filter function is implemented for efficiency. Additionally, users are allowed to create housing and sublease posts of their own. A "like" function is implemented for user's future reference. Moreover, a "liked" list will be generated with liked users' names and links to their profile, enabling users to identify potential roommates who have expressed interest in the same house.
 ## Inspiration
